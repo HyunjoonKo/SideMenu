@@ -161,7 +161,7 @@ open class SideMenuManager : NSObject {
             menuLeftNavigationController?.locked = false
             removeMenuBlurForMenu(menuLeftNavigationController)
         }
-        didSet {
+        didSet {/*
             guard menuLeftNavigationController != oldValue else {
                 return
             }
@@ -170,7 +170,8 @@ open class SideMenuManager : NSObject {
                 menuLeftNavigationController = oldValue
                 return
             }
-            
+            */
+            // MARK: Linus 수정. side menu에서 다른 view controller가 present될 시 오류가 나기 때문.
             setupNavigationController(menuLeftNavigationController, leftSide: true)
         }
     }
